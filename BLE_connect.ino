@@ -64,8 +64,8 @@
 
 #define LED_PIN       13
 
-const unsigned long
-  BLINKTIME =         100;
+//const unsigned long
+//  BLINKTIME =         100;
   
 unsigned long 
   t_blink =           0L;
@@ -114,6 +114,7 @@ void setup(void)
   //while (!Serial);  // required for Flora & Micro
   //delay(500);
 
+  //all Serial commands used for debugging, uncomment if needed
   //Serial.begin(115600);
   //Serial.println(F("Adafruit Bluefruit Command Mode Example"));
   //Serial.println(F("---------------------------------------"));
@@ -339,10 +340,6 @@ void loop(void)
     //Serial.println(F("BLINK Request Received"));
     ble.println("AT+BLEUARTRX");
   }
-  //else {
-    //analogWrite(13, BLEbuffer);
-    //analogWrite(11, BLEbuffer);
-  //}
   BLEbuffer = "";
 }
 
